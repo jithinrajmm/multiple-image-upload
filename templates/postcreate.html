@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+    .col{
+        max-height: 500px;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.256);
+        color: white;
+        border-radius: 10px;
+        border: dotted 2px yellow;
+    }
+    .input{
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        margin-top: 10px;
+    }
+
+</style>
+<body>
+    
+    <div class="row">
+        <div class="col">
+            
+            
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}<br>
+        {{ formset.as_p }}<br>
+        
+        <div class="input">
+            <input type="submit" value="CREATE" style="padding:15px">
+        </div>
+        
+        
+        
+    </form>
+        </div>
+    </div>
+  
+    
+</body>
+</html>
